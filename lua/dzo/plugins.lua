@@ -45,6 +45,9 @@ return packer.startup(function(use)
   use { "folke/tokyonight.nvim",
         commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764"
       }
+  use { "LunarVim/darkplus.nvim",
+        commit = "c7fff5ce62406121fc6c9e4746f118b2b2499c4c" 
+      }
 
   -- completion
   use { "hrsh7th/nvim-cmp",
@@ -66,7 +69,8 @@ return packer.startup(function(use)
         commit = "39e2eda76828d88b773cc27a3f61d2ad782c922d"
       }
   use { "hrsh7th/cmp-nvim-lua",
-        commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
+        commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21"
+      }
 
   -- snipets
   use { "L3MON4D3/LuaSnip",
@@ -87,7 +91,18 @@ return packer.startup(function(use)
         commit = "0051870dd728f4988110a1b2d47f4a4510213e31"
       }
 
-	if PACKER_BOOTSTRAP then
+  -- Telescope
+  use { "nvim-telescope/telescope.nvim",
+        tag = "0.1.8"
+      }
+
+  -- Treesitter
+  use { "nvim-treesitter/nvim-treesitter",
+        tag = "v0.9.2",
+        run = ":TSUpdate"
+    }
+
+  if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
 end)
