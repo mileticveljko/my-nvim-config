@@ -13,29 +13,37 @@ end
 
 local status_ok, mason = pcall(require, "mason")
 if not status_ok then
-  msg("Couldn't load Mason!")
+  msg("Couldn't load mason!")
+  return
+end
+
+local status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
+if not status_ok then
+  msg("Couldn't load mason-lspconfig!")
+  return
+end
+
+local status_ok, lspconfig = pcall(require, "lspconfig")
+if not status_ok then
+  msg("Couldn't load lspconfig!")
   return
 end
 
 mason.setup({})
-
-local status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
-if not status_ok then
-  msg("Couldn't load Mason LSP-config!")
-  return
-end
-
 mason_lspconfig.setup({
-  ensure_isntalled = {
-    "lua_ls",
-    "hls",
+  ensure_installed = {
+    "sumneko_lua",
+    "clangd",
   }
 })
 
-require('lspconfig').lua_ls.setup({
-  on_attach = on_attach
-})
+local servers = {
+  "lua_ls",
+  "clangd",
+}
 
-require('lspconfig').hls.setup({
-  on_attach = on_attach
-})
+for _, srv in pairs(servers) do
+  lspconfig[srv].setup {
+    on_attach = on_attach
+  }
+end

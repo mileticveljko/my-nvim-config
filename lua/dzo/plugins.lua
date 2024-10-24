@@ -65,6 +65,8 @@ return packer.startup(function(use)
   use { "hrsh7th/cmp-nvim-lsp",
         commit = "39e2eda76828d88b773cc27a3f61d2ad782c922d"
       }
+  use { "hrsh7th/cmp-nvim-lua",
+        commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
 
   -- snipets
   use { "L3MON4D3/LuaSnip",

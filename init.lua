@@ -1,4 +1,4 @@
-user = "dzo"
+local user = "dzo"
 
 local options = user .. ".options"
 local keymaps = user .. ".keymaps"
@@ -7,9 +7,9 @@ local colorscheme = user .. ".colorscheme"
 local cmp = user .. ".cmp"
 local lsp = user .. ".lsp"
 
-_ = pcall(require, options)
-_ = pcall(require, keymaps)
-_ = pcall(require, plugins)
-_ = pcall(require, colorscheme)
-_ = pcall(require, cmp)
-_ = pcall(require, lsp)
+pcall(require, options)
+pcall(require, keymaps)
+pcall(require, plugins)
+pcall(require, colorscheme)
+pcall(require, cmp)
+pcall(require, lsp)
