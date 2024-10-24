@@ -81,9 +81,10 @@ return packer.startup(function(use)
   use { "williamboman/mason.nvim",
         tag = "v1.10.0"
       }
+  use { "williamboman/mason-lspconfig.nvim",
+        commit = "0051870dd728f4988110a1b2d47f4a4510213e31"
+      }
 
-	-- automatically set up your configuration after cloning packer.nvim
-	-- put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
