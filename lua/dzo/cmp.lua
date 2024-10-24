@@ -1,18 +1,23 @@
+local fn = vim.fn
+local msg = vim.notify
+
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
+  msg("Couldn't load cmp!")
   return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
+  msg("Couldn't load luasnip!")
   return
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
-  local col = vim.fn.col "." - 1
-  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+  local col = fn.col "." - 1
+  return col == 0 or fn.getline("."):sub(col, col):match "%s"
 end
 
 cmp.setup {
