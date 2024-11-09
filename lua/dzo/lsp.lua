@@ -34,12 +34,14 @@ mason_lspconfig.setup({
   ensure_installed = {
     "sumneko_lua",
     "clangd",
+    "gopls",
   }
 })
 
 local servers = {
   "lua_ls",
   "clangd",
+  "gopls",
 }
 
 for _, srv in pairs(servers) do

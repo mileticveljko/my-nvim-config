@@ -46,7 +46,7 @@ return packer.startup(function(use)
         commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764"
       }
   use { "LunarVim/darkplus.nvim",
-        commit = "c7fff5ce62406121fc6c9e4746f118b2b2499c4c" 
+        commit = "c7fff5ce62406121fc6c9e4746f118b2b2499c4c"
       }
 
   -- completion
@@ -100,6 +100,11 @@ return packer.startup(function(use)
   use { "nvim-treesitter/nvim-treesitter",
         tag = "v0.9.2",
         run = ":TSUpdate"
+    }
+  
+  -- Autopairs
+  use { "windwp/nvim-autopairs",
+        commit = "ee297f215e95a60b01fde33275cc3c820eddeebe"
     }
 
   if PACKER_BOOTSTRAP then
