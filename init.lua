@@ -1,4 +1,4 @@
-local user = "dzo"
+local user = "user"
 
 local options = user .. ".options"
 local keymaps = user .. ".keymaps"
