@@ -100,12 +100,17 @@ return packer.startup(function(use)
   use { "nvim-treesitter/nvim-treesitter",
         tag = "v0.9.2",
         run = ":TSUpdate"
-    }
-  
+      }
+
   -- Autopairs
   use { "windwp/nvim-autopairs",
         commit = "ee297f215e95a60b01fde33275cc3c820eddeebe"
-    }
+      }
+
+  -- Comments
+  use { "numToStr/Comment.nvim",
+        tag="v0.8.0"
+      }
 
   if PACKER_BOOTSTRAP then
 		require("packer").sync()
