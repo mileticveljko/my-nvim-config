@@ -1,4 +1,4 @@
-local colorscheme = "tokyonight"
+local colorscheme = "catppuccin"
 
 local msg = vim.notify
 

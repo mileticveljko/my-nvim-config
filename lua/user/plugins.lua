@@ -42,8 +42,9 @@ return packer.startup(function(use)
       tag = "v0.1.4",
     },
 	-- colorschemes
-    { "folke/tokyonight.nvim",
-      commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764",
+    { "catppuccin/nvim",
+      as = "catppuccin",
+      tag = "v1.9.0",
     },
   -- completion
     { "hrsh7th/nvim-cmp",
@@ -57,6 +58,9 @@ return packer.startup(function(use)
     },
     { "hrsh7th/cmp-cmdline",
       commit = "d250c63aa13ead745e3a40f61fdd3470efde3923",
+    },
+    { "hrsh7th/cmp-nvim-lsp",
+      commit = "39e2eda76828d88b773cc27a3f61d2ad782c922d"
     },
     { "hrsh7th/cmp-nvim-lua",
       commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21",
@@ -87,7 +91,7 @@ return packer.startup(function(use)
     },
   -- treesitter
     { "nvim-treesitter/nvim-treesitter",
-      tag = "v0.9.2",
+      tag = "v0.9.0",
       run = ":TSUpdate",
     },
   -- autopairs
@@ -96,8 +100,12 @@ return packer.startup(function(use)
     },
   -- comments
     { "numToStr/Comment.nvim",
-      tag="v0.8.0",
-    }
+      tag = "v0.8.0",
+    },
+  -- git
+    { "lewis6991/gitsigns.nvim",
+      tag = "v0.9.0",
+    },
   }
 
   if PACKER_BOOTSTRAP then

@@ -10,6 +10,7 @@ local telescope = user .. ".telescope"
 local treesitter = user .. ".treesitter"
 local autopairs = user .. ".autopairs"
 local comment = user .. ".comment"
+local gitsigns = user .. ".gitsigns"
 
 pcall(require, options)
 pcall(require, keymaps)
@@ -21,3 +22,4 @@ pcall(require, telescope)
 pcall(require, treesitter)
 pcall(require, autopairs)
 pcall(require, comment)
+pcall(require, gitsigns)

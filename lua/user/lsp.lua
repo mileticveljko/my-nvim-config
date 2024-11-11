@@ -9,6 +9,15 @@ local on_attach = function ()
   keymap.set("n", "go", lsp.type_definition, {})
   keymap.set("n", "gr", lsp.references, {})
   keymap.set("n", "gs", lsp.signature_help, {})
+
+  vim.lsp.handlers['textDocument/publishDiagnostics'] =
+    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+      virtual_text = true,
+      signs = true,
+      underline = true,
+      update_in_insert = true,
+    }
+  )
 end
 
 local status_ok, mason = pcall(require, "mason")
@@ -29,20 +38,15 @@ if not status_ok then
   return
 end
 
-mason.setup({})
-mason_lspconfig.setup({
-  ensure_installed = {
-    "sumneko_lua",
-    "clangd",
-    "gopls",
-  }
-})
-
 local servers = {
   "lua_ls",
-  "clangd",
   "gopls",
 }
+
+mason.setup({})
+mason_lspconfig.setup({
+  ensure_installed = servers
+})
 
 for _, srv in pairs(servers) do
   lspconfig[srv].setup {

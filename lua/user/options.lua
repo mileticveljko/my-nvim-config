@@ -68,3 +68,5 @@ vim.opt.ai = true
 vim.opt.ar = true
 -- background color mode
 vim.opt.bg = "dark"
+-- term color
+vim.opt.termguicolors = true
