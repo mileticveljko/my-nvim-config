@@ -106,6 +106,15 @@ return packer.startup(function(use)
     { "lewis6991/gitsigns.nvim",
       tag = "v0.9.0",
     },
+  -- tree
+    { "nvim-neo-tree/neo-tree.nvim",
+      branch = "v3.x",
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons",
+        "MunifTanjim/nui.nvim",
+      },
+    },
   }
 
   if PACKER_BOOTSTRAP then
