@@ -115,6 +115,10 @@ return packer.startup(function(use)
         "MunifTanjim/nui.nvim",
       },
     },
+  -- formater
+    { "nvimtools/none-ls.nvim",
+      commit = "fb7acad9e98ad9c617775451c1aea95157e17942",
+    },
   }
 
   if PACKER_BOOTSTRAP then

@@ -1,3 +1,5 @@
+-- Nvim version 0.9.5
+
 local user = "user"
 
 local options = user .. ".options"
@@ -12,6 +14,7 @@ local autopairs = user .. ".autopairs"
 local comment = user .. ".comment"
 local gitsigns = user .. ".gitsigns"
 local neotree = user .. ".neotree"
+local none_ls = user .. ".none-ls"
 
 pcall(require, options)
 pcall(require, keymaps)
@@ -25,3 +28,4 @@ pcall(require, autopairs)
 pcall(require, comment)
 pcall(require, gitsigns)
 pcall(require, neotree)
+pcall(require, none_ls)
