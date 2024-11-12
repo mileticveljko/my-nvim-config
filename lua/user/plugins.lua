@@ -1,5 +1,4 @@
 local fn = vim.fn
-local msg = vim.notify
 
 -- automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -27,7 +26,7 @@ vim.cmd([[
 -- use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  msg("Couldn't load Packer!")
+  print("Couldn't load Packer!")
 	return
 end
 

@@ -1,6 +1,5 @@
 local keymap = vim.keymap
 local lsp = vim.lsp.buf
-local msg = vim.notify
 
 local on_attach = function ()
   keymap.set("n", "K",  lsp.hover, {})
@@ -22,19 +21,19 @@ end
 
 local status_ok, mason = pcall(require, "mason")
 if not status_ok then
-  msg("Couldn't load mason!")
+  print("Couldn't load mason!")
   return
 end
 
 local status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status_ok then
-  msg("Couldn't load mason-lspconfig!")
+  print("Couldn't load mason-lspconfig!")
   return
 end
 
 local status_ok, lspconfig = pcall(require, "lspconfig")
 if not status_ok then
-  msg("Couldn't load lspconfig!")
+  print("Couldn't load lspconfig!")
   return
 end
 

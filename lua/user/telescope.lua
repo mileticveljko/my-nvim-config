@@ -1,8 +1,6 @@
-local msg = vim.notify
-
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
-  msg("Couldn't find telescope!")
+  print("Couldn't find telescope!")
   return
 end
 

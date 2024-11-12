@@ -1,15 +1,14 @@
 local fn = vim.fn
-local msg = vim.notify
 
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-  msg("Couldn't load cmp!")
+  print("Couldn't load cmp!")
   return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
-  msg("Couldn't load luasnip!")
+  print("Couldn't load luasnip!")
   return
 end
 
