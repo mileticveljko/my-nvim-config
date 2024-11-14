@@ -3,7 +3,7 @@ vim.opt.backup = false
 -- allows neowin to access system clipboard
 vim.opt.clipboard = "unnamedplus"
 -- neovim command line height
-vim.opt.cmdheight = 2
+vim.opt.cmdheight = 1
 -- mostly for cmp
 vim.opt.completeopt = {"menuone", "noselect"}
 -- `` is invisible in markdown files
