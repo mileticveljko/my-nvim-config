@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- remap leader key --
 keymap("", "<Space>", "Nop", opts)
@@ -15,7 +15,7 @@ keymap("n", "<C-k>", "<C-W>k", opts)
 keymap("n", "<C-l>", "<C-W>l", opts)
 
 -- show file tree --
-keymap("n", "<leader>e", ":Neotree<CR>", opts)
+keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
 -- open new window -- 
 keymap("n", "<leader>k", "<C-W>s", opts)
