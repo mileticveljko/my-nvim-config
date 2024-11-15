@@ -13,6 +13,7 @@ return {
     end
 
     vim.keymap.set("n", "<leader>e", ":Neotree<CR>", {})
+    vim.keymap.set("n", "<leader>q", ":Neotree close<CR>", {})
     neotree.setup({})
   end
 }
