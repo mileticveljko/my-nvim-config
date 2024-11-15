@@ -19,7 +19,7 @@ if not status_ok then
   print("Couldn't load Packer!")
 	return
 end
+lazy.setup(user .. ".plugins")
 
 pcall(require, user .. ".options")
 pcall(require, user .. ".keymaps")
-lazy.setup(user .. ".plugins")
