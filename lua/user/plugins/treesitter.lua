@@ -2,6 +2,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    tag = "v0.9.0",
     config = function()
       local status_ok, configs = pcall(require, "nvim-treesitter.configs")
       if not status_ok then
@@ -19,11 +20,14 @@ return {
         highlight = {
           enable = true,
         },
+
         autopairs = {
           enable = true,
         },
+
         indent = {
           enable = true,
+          disable = {}
         },
       })
     end
