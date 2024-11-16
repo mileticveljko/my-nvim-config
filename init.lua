@@ -1,5 +1,7 @@
 pcall(require, "neovibe.options")
 pcall(require, "neovibe.keymaps")
+pcall(require, "user_options")
+pcall(require, "user_keymaps")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

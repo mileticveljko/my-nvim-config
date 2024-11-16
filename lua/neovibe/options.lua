@@ -41,9 +41,9 @@ vim.opt.updatetime = 300
 -- converts tab into spaces
 vim.opt.expandtab = true
 -- number of spaces inserted for each indentation
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 -- insert 2 spaces for tab
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 -- highlight the cursor line
 vim.opt.cursorline = true
 -- show numbers
@@ -69,4 +69,4 @@ vim.opt.ar = true
 -- background color mode
 vim.opt.bg = "dark"
 -- term color
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
