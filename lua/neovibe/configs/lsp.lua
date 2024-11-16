@@ -4,8 +4,14 @@ if not status_ok then
   return
 end
 
-lspconfig.lua_ls.setup({})
-lspconfig.gopls.setup({})
+local status_ok, lsp_servers = pcall(require, "user_lsp")
+if not status_ok then
+  lsp_servers = {}
+end
+
+for _, lsp_server in pairs(lsp_servers) do
+  lspconfig[lsp_server].setup({})
+end
 
 vim.lsp.handlers['textDocument/publishDiagnostics'] =
   vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -14,6 +20,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] =
     underline = true,
     update_in_insert = true,
   })
+
 vim.keymap.set("n", "K",  vim.lsp.buf.hover, {})
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
