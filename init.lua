@@ -1,5 +1,5 @@
--- Nvim version 0.9.5
-local user = "user"
+pcall(require, "neovibe.options")
+pcall(require, "neovibe.keymaps")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -19,7 +19,4 @@ if not status_ok then
   print("Couldn't load Packer!")
 	return
 end
-lazy.setup(user .. ".plugins")
-
-pcall(require, user .. ".options")
-pcall(require, user .. ".keymaps")
+lazy.setup("neovibe.plugins")
