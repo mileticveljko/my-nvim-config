@@ -3,10 +3,10 @@
   <h2 align="center">Neovibe</h2>
 </div>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[contributors-shield]: https://github.com/mileticveljko/neovibe/graphs/contributors
+[forks-shield]: https://github.com/mileticveljko/neovibe/forks
+[stars-shield]: https://github.com/mileticveljko/neovibe/stargazers
+[issues-shield]: https://github.com/mileticveljko/neovibe/issues
 
 
 <h5 align="center">
