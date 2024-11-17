@@ -4,11 +4,8 @@ if not status_ok then
   return
 end
 
-local status_ok, lsp_servers = pcall(require, "user_lsp")
-if not status_ok then
-  lsp_servers = { "lua_ls" }
-end
+local servers = require("user.lsp")
 
 mason_lspconfig.setup({
-  ensure_installed = lsp_servers
+  ensure_installed = servers
 })

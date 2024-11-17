@@ -4,8 +4,10 @@ if not status_ok then
   return
 end
 
+local tst = require("user.treesitter")
+
 configs.setup({
-  ensure_installed = { "lua", "go" },
+  ensure_installed = tst,
 
   ignore_install = { "" },
 

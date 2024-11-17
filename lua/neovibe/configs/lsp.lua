@@ -4,10 +4,7 @@ if not status_ok then
   return
 end
 
-local status_ok, lsp_servers = pcall(require, "user_lsp")
-if not status_ok then
-  lsp_servers = {}
-end
+local lsp_servers = require("user.lsp")
 
 for _, lsp_server in pairs(lsp_servers) do
   lspconfig[lsp_server].setup({})
