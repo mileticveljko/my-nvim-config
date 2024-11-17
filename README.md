@@ -3,11 +3,17 @@
   <h2 align="center">Neovibe</h2>
 </div>
 
-[contributors-shield]: https://github.com/mileticveljko/neovibe/graphs/contributors
-[forks-shield]: https://github.com/mileticveljko/neovibe/forks
-[stars-shield]: https://github.com/mileticveljko/neovibe/stargazers
-[issues-shield]: https://github.com/mileticveljko/neovibe/issues
+<p align="center">
+  <img src="https://img.shields.io/github/contributors/mileticveljko/neovibe" alt="Contributors" style="margin-right: 15px; height: 30px; border-radius: 5px; border: 2px solid #ccc;">
+  <img src="https://img.shields.io/github/forks/mileticveljko/neovibe" alt="Forks" style="margin-right: 15px; height: 30px; border-radius: 5px; border: 2px solid #ccc;">
+  <img src="https://img.shields.io/github/stars/mileticveljko/neovibe" alt="Stars" style="margin-right: 15px; height: 30px; border-radius: 5px; border: 2px solid #ccc;">
+  <img src="https://img.shields.io/github/issues/mileticveljko/neovibe" alt="Issues" style="height: 30px; border-radius: 5px; border: 2px solid #ccc;">
+</p>
 
+[contributors-url]: https://github.com/mileticveljko/neovibe/graphs/contributors
+[forks-url]: https://github.com/mileticveljko/neovibe/forks
+[stars-url]: https://github.com/mileticveljko/neovibe/stargazers
+[issues-url]: https://github.com/mileticveljko/neovibe/issues
 
 <h5 align="center">
 Neovibe is a out-of-the-box Neovim configuration, fully written in Lua. It is designed to help users learn Lua, Neovim, and Neovim plugins through hands-on experience.
